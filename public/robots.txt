@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://playlab.live
+
+# Sitemaps
+Sitemap: https://playlab.live/sitemap.xml

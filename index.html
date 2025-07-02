@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-3901174951575931">
+    <title>Game & Tools Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3901174951575931" crossorigin="anonymous"></script>
+
+    <style>
+        @keyframes slideIn {
+            0% { transform: translateX(100%); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideOut {
+            0% { transform: translateX(0); opacity: 1; }
+            100% { transform: translateX(-100%); opacity: 0; }
+        }
+        
+        @keyframes fadeIn {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .animate-slide-in {
+            animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .animate-slide-out {
+            animation: slideOut 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out 0.2s both;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="overflow-hidden">
+        <div class="flex items-center justify-center gap-4">
+            <img src="assets/logo.png" alt="GameLab" class="h-48 w-auto">
+        </div>
+    </header>
+
+    <!-- Carousel Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="relative max-w-6xl mx-auto rounded-3xl overflow-hidden shadow-2xl">
+                <div class="carousel relative h-[700px] md:h-[600px] overflow-hidden" id="carousel">
+                    <!-- Slide 1: Card Game -->
+                    <div class="carousel-slide absolute inset-0 opacity-100 transform translate-x-0 transition-all duration-700 ease-in-out">
+                        <img src="assets/cards_cover.webp" alt="Card Game" class="w-full h-full object-cover brightness-75">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 text-white p-8 md:p-12">
+                            <div class="slide-content transform translate-y-0 opacity-100 transition-all duration-500 delay-200">
+                                <h2 class="text-3xl md:text-4xl font-bold mb-4">Classic Card Game</h2>
+                                <p class="text-lg md:text-xl mb-6 opacity-90">Experience the thrill of strategic card gameplay with our beautifully designed digital card game featuring stunning animations and intuitive controls.</p>
+                                <a href="https://cards.playlab.live" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">Play Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Battleship Game -->
+                    <div class="carousel-slide absolute inset-0 opacity-0 transform translate-x-full transition-all duration-700 ease-in-out">
+                        <img src="assets/battleship_cover.png" alt="Battleship Game" class="w-full h-full object-cover brightness-75">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 text-white p-8 md:p-12">
+                            <div class="slide-content transform translate-y-5 opacity-0 transition-all duration-500 delay-200">
+                                <h2 class="text-3xl md:text-4xl font-bold mb-4">Epic Battleship Game</h2>
+                                <p class="text-lg md:text-xl mb-6 opacity-90">Command your fleet and engage in strategic naval warfare. Plan your attacks, defend your ships, and dominate the seas in this classic battleship experience.</p>
+                                <a href="https://battleship.playlab.live" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">Set Sail</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: AI Resume Builder -->
+                    <div class="carousel-slide absolute inset-0 opacity-0 transform translate-x-full transition-all duration-700 ease-in-out">
+                        <img src="assets/resume_builder.jpg" alt="AI Resume Builder" class="w-full h-full object-cover brightness-75">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 right-0 text-white p-8 md:p-12">
+                            <div class="slide-content transform translate-y-5 opacity-0 transition-all duration-500 delay-200">
+                                <h2 class="text-3xl md:text-4xl font-bold mb-4">AI Resume Builder</h2>
+                                <p class="text-lg md:text-xl mb-6 opacity-90">Create professional, ATS-optimized resumes in minutes with our intelligent AI-powered resume builder. Stand out from the competition with personalized suggestions.</p>
+                                <a href="https://builder.playlab.live" class="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-lg">Build Resume</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <button class="carousel-nav absolute top-1/2 left-5 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-white w-12 h-12 rounded-full flex items-center justify-center text-gray-800 text-xl transition-all duration-300 hover:shadow-lg z-10" onclick="previousSlide()">‹</button>
+                <button class="carousel-nav absolute top-1/2 right-5 transform -translate-y-1/2 bg-white bg-opacity-90 hover:bg-white w-12 h-12 rounded-full flex items-center justify-center text-gray-800 text-xl transition-all duration-300 hover:shadow-lg z-10" onclick="nextSlide()">›</button>
+
+                <!-- Dots -->
+                <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
+                    <span class="dot w-3 h-3 rounded-full bg-white cursor-pointer transition-all duration-300 scale-110" onclick="currentSlide(1)"></span>
+                    <span class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer transition-all duration-300 hover:bg-opacity-75" onclick="currentSlide(2)"></span>
+                    <span class="dot w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer transition-all duration-300 hover:bg-opacity-75" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-light text-center text-gray-800 mb-12">Explore Our Collection</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card Game Card -->
+                <div class="card bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-2xl cursor-pointer">
+                    <div class="overflow-hidden">
+                        <img src="assets/cards.png" alt="Card Game" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Classic Card Game</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Strategic card gameplay with beautiful animations and intuitive controls for endless entertainment.</p>
+                        <a href="https://cards.playlab.live" class="inline-block px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-md">Play Now</a>
+                    </div>
+                </div>
+
+                <!-- Battleship Game Card -->
+                <div class="card bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-2xl cursor-pointer">
+                    <div class="overflow-hidden">
+                        <img src="assets/battleship.png" alt="Battleship Game" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Epic Battleship Game</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Command your fleet in strategic naval warfare. Plan attacks and dominate the seas in this classic game.</p>
+                        <a href="https://battleship.playlab.live" class="inline-block px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-md">Set Sail</a>
+                    </div>
+                </div>
+
+                <!-- AI Resume Builder Card -->
+                <div class="card bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:transform hover:-translate-y-3 hover:shadow-2xl cursor-pointer">
+                    <div class="overflow-hidden">
+                        <img src="assets/resume_builder.jpg" alt="AI Resume Builder" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">AI Resume Builder</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">Create professional, ATS-optimized resumes with AI-powered suggestions and personalized templates.</p>
+                        <a href="https://builder.playlab.live" class="inline-block px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full text-sm font-medium transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-md">Build Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-200">About Us</h3>
+                    <p class="text-gray-400 leading-relaxed">We create engaging games and powerful tools to enhance your digital experience and productivity.</p>
+                </div>
+                <div></div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-200">Contact Info</h3>
+                    <div class="text-gray-400 space-y-2">
+                        <p>Email: hassanraza01.dev@gmail.com, m.saim.senior@gmail.com</p>
+                        <p>Phone: (92) 340-7432140</p>
+                        <p>Address: Lahore, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Games & Tools Hub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            // Update slides
+            slides.forEach((slide, i) => {
+                const slideContent = slide.querySelector('.slide-content');
+                
+                if (i === index) {
+                    // Show current slide
+                    slide.classList.remove('opacity-0', 'translate-x-full', '-translate-x-full');
+                    slide.classList.add('opacity-100', 'translate-x-0');
+                    
+                    // Animate content in
+                    setTimeout(() => {
+                        slideContent.classList.remove('translate-y-5', 'opacity-0');
+                        slideContent.classList.add('translate-y-0', 'opacity-100');
+                    }, 100);
+                } else if (i < index) {
+                    // Hide previous slides
+                    slide.classList.remove('opacity-100', 'translate-x-0', 'translate-x-full');
+                    slide.classList.add('opacity-0', '-translate-x-full');
+                    slideContent.classList.remove('translate-y-0', 'opacity-100');
+                    slideContent.classList.add('translate-y-5', 'opacity-0');
+                } else {
+                    // Hide next slides
+                    slide.classList.remove('opacity-100', 'translate-x-0', '-translate-x-full');
+                    slide.classList.add('opacity-0', 'translate-x-full');
+                    slideContent.classList.remove('translate-y-0', 'opacity-100');
+                    slideContent.classList.add('translate-y-5', 'opacity-0');
+                }
+            });
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('bg-opacity-50');
+                    dot.classList.add('scale-110');
+                } else {
+                    dot.classList.add('bg-opacity-50');
+                    dot.classList.remove('scale-110');
+                }
+            });
+
+            currentSlideIndex = index;
+        }
+
+        function nextSlide() {
+            const nextIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(nextIndex);
+        }
+
+        function previousSlide() {
+            const prevIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            showSlide(prevIndex);
+        }
+
+        function currentSlide(index) {
+            showSlide(index - 1);
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        // Initialize carousel
+        showSlide(0);
+        startAutoSlide();
+
+        // Pause auto-slide on hover
+        const carousel = document.getElementById('carousel');
+        carousel.addEventListener('mouseenter', stopAutoSlide);
+        carousel.addEventListener('mouseleave', startAutoSlide);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                previousSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    previousSlide();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
